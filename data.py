@@ -1,3 +1,11 @@
+base_url = 'https://qa-scooter.praktikum-services.ru'
+create_courier_url = base_url + '/api/v1/courier'
+
+error_create_already_created_user = "Этот логин уже используется. Попробуйте другой."
+error_create_courier_without_required_fields = "Недостаточно данных для создания учетной записи"
+error_login_courier_without_required_fields = "Недостаточно данных для входа"
+error_login_with_invalid_credentials = "Учетная запись не найдена"
+
 data_for_order_black_only = {
     "firstName": "Naruto",
     "lastName": "Uchiha",

@@ -1,3 +1,4 @@
+import data
 import helpers
 import pytest
 
@@ -24,7 +25,7 @@ class TestLogin:
         response_json = response.json()
 
         assert response.status_code == 400
-        assert response_json["message"] == "Недостаточно данных для входа"
+        assert response_json["message"] == data.error_login_courier_without_required_fields
 
     @pytest.mark.parametrize('login, password', [
         ('invalid_username@', 'valid_password'),
@@ -38,4 +39,4 @@ class TestLogin:
         response_json = response.json()
 
         assert response.status_code == 404
-        assert response_json["message"] == "Учетная запись не найдена"
+        assert response_json["message"] == data.error_login_with_invalid_credentials

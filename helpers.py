@@ -39,3 +39,6 @@ def create_order(data):
 def get_list_orders_by_courier_id(id):
     response = requests.get(f'https://qa-scooter.praktikum-services.ru/api/v1/orders?courierId= + {id}')
     return response
+
+def delete_courier_by_id(id):
+    response = requests.delete(f'https://qa-scooter.praktikum-services.ru/api/v1/orders?courierId= + {id}')
